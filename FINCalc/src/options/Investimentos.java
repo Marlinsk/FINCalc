@@ -16,10 +16,10 @@ public class Investimentos extends Carteira {
 	protected double taxaPosFixada;
 	protected double taxaIPCA;
 	
-	protected double valorAnualPorcentagem;
-	
+	protected double rendimentoAnual;
 	protected int prazoAno;
 	
+	// Calcular Rentabilidade de uma ação com taxa pré-fixada
 	public static void calcularRentabilidadecomTaxaPreFixada(double valorAplicado, double taxaPreFixada, int prazoAno) {
         
 		double variavelaux1 = (1 + taxaPreFixada / 100);
@@ -37,9 +37,10 @@ public class Investimentos extends Carteira {
 		System.out.println(df.format(valorfuturo));
 	}
 
-    public static void calcularRentabilidadecomTaxaPosFixada(double valorAplicado, double valorAnualPorcentagem, double taxaPosFixada, int prazoAno) {
+	// Calcular Rentabilidade de uma ação com taxa pós-fixada
+    public static void calcularRentabilidadecomTaxaPosFixada(double valorAplicado, double rendimentoAnual, double taxaPosFixada, int prazoAno) {
     	
-    	double variavelaux1 = ( 1 + (taxaPosFixada / 100) * (valorAnualPorcentagem/100));
+    	double variavelaux1 = ( 1 + (taxaPosFixada / 100) * (rendimentoAnual/100));
     	int variavelaux2 = prazoAno;
     	double formula = Math.pow(variavelaux1, variavelaux2);
     	
@@ -54,9 +55,10 @@ public class Investimentos extends Carteira {
     	System.out.println(df.format(valorFututo));
 	}
 	
-    public static void calcularRentabilidadecomTaxaIPCA(double valorAplicado, double valorAnualPorcentagem, double taxaIPCA, int prazoAno) {
+    // Calcular Rentabilidade de uma ação com taxa IPCA
+    public static void calcularRentabilidadecomTaxaIPCA(double valorAplicado, double rendimentoAnual, double taxaIPCA, int prazoAno) {
     	
-    	double variavelaux1 = ( 1 + (taxaIPCA / 100) * (valorAnualPorcentagem/100));
+    	double variavelaux1 = ( 1 + (taxaIPCA / 100) * (rendimentoAnual/100));
     	int variavelaux2 = prazoAno;
     	double formula = Math.pow(variavelaux1, variavelaux2);
     	
@@ -71,6 +73,7 @@ public class Investimentos extends Carteira {
     	System.out.println(df.format(valorfututo));
     }
 	
+    // Calculo de rentabilidade acumulada de uma ação
     public static void rentabilidadeAcumulada(double valorAplicado, double valorAtual) {
     	
     	BigDecimal rentabilidade = new BigDecimal(((valorAtual / valorAplicado) - 1) * 100);
@@ -127,11 +130,11 @@ public class Investimentos extends Carteira {
 	}
 
 	public double getValorAnualPorcentagem() {
-		return valorAnualPorcentagem;
+		return rendimentoAnual;
 	}
 
 	public void setValorAnualPorcentagem(double valorAnualPorcentagem) {
-		this.valorAnualPorcentagem = valorAnualPorcentagem;
+		this.rendimentoAnual = valorAnualPorcentagem;
 	}
 
 	public int getPrazoAno() {
