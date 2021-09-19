@@ -9,7 +9,6 @@ import entidade.Carteira;
 
 public class Investimentos extends Carteira {
 
-	protected double totalDinheiroInvestido;
 	protected double valorAplicado;
 	
 	protected double taxaPreFixada;
