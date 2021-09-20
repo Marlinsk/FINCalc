@@ -8,15 +8,6 @@ import java.util.Locale;
 import entidade.Carteira;
 
 public class Investimentos extends Carteira {
-
-	protected double valorAplicado;
-	
-	protected double taxaPreFixada;
-	protected double taxaPosFixada;
-	protected double taxaIPCA;
-	
-	protected double rendimentoAnual;
-	protected int prazoAno;
 	
 	// Calcular Rentabilidade de uma ação com taxa pré-fixada
 	public static void calcularRentabilidadecomTaxaPreFixada(double valorAplicado, double taxaPreFixada, int prazoAno) {
@@ -85,63 +76,5 @@ public class Investimentos extends Carteira {
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
     	System.out.println(df.format(rentabilidade));
     }
-    
-    ////////////////////// * GETTERS AND SETTER * //////////////////////
-
-	public double getTotalDinheiroInvestido() {
-		return totalDinheiroInvestido;
-	}
-
-	public void setTotalDinheiroInvestido(double totalDinheiroInvestido) {
-		this.totalDinheiroInvestido = totalDinheiroInvestido;
-	}
-
-	public double getValorAplicado() {
-		return valorAplicado;
-	}
-
-	public void setValorAplicado(double valorAplicado) {
-		this.valorAplicado = valorAplicado;
-	}
-
-	public double getTaxaPreFixada() {
-		return taxaPreFixada;
-	}
-
-	public void setTaxaPreFixada(double taxaPreFixada) {
-		this.taxaPreFixada = taxaPreFixada;
-	}
-
-	public double getTaxaPosFixada() {
-		return taxaPosFixada;
-	}
-
-	public void setTaxaPosFixada(double taxaPosFixada) {
-		this.taxaPosFixada = taxaPosFixada;
-	}
-
-	public double getTaxaIPCA() {
-		return taxaIPCA;
-	}
-
-	public void setTaxaIPCA(double taxaIPCA) {
-		this.taxaIPCA = taxaIPCA;
-	}
-
-	public double getValorAnualPorcentagem() {
-		return rendimentoAnual;
-	}
-
-	public void setValorAnualPorcentagem(double valorAnualPorcentagem) {
-		this.rendimentoAnual = valorAnualPorcentagem;
-	}
-
-	public int getPrazoAno() {
-		return prazoAno;
-	}
-
-	public void setPrazoAno(int prazoAno) {
-		this.prazoAno = prazoAno;
-	}
     
 }
