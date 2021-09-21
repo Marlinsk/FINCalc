@@ -1,112 +1,145 @@
 package entidade;
 
-import java.math.BigDecimal;
-
 public class Carteira {
     
-	protected BigDecimal saldoConta;
-	protected BigDecimal patrimonio;
+	protected double saldoConta;
+	protected double valorSalario;
 	
-	protected BigDecimal dinheiroGasto;
-	protected BigDecimal totalDinheiroGasto;
-	protected BigDecimal varAuxiliarGasto;
+	protected double totalDinheiroGasto;
+	protected double metaDeGasto;
 	
-	protected BigDecimal metaDeGasto;
+	protected double dinheiroEco;
+	protected double economiaTotalAno;
 	
-	protected BigDecimal saldoMetaMes;
-	protected BigDecimal saldoMetaAno;
-	protected BigDecimal saldoMetaLongoPrazo;
+	protected double saldoMetaMes;
+	protected double saldoMetaAno;
+	protected double saldoMetaLongoPrazo;
 	
-	protected BigDecimal valorSalario;
+    protected double valorAplicado;
+	protected double taxaPreFixada;
+	protected double taxaPosFixada;
+	protected double taxaIPCA;
+	protected double rendimentoAnual;
+	protected int prazoAno;
 	
-	protected BigDecimal totalDinheiroInvestido;
-
-	public BigDecimal getSaldoConta() {
+	public double getSaldoConta() {
 		return saldoConta;
 	}
 
-	public void setSaldoConta(BigDecimal saldoConta) {
+	public void setSaldoConta(double saldoConta) {
 		this.saldoConta = saldoConta;
 	}
-	
-	public BigDecimal getPatrimonio() {
-		return patrimonio;
-	}
 
-	public void setPatrimonio(BigDecimal patrimonio) {
-		this.patrimonio = patrimonio;
-	}
-
-	public BigDecimal getDinheiroGasto() {
-		return dinheiroGasto;
-	}
-
-	public void setDinheiroGasto(BigDecimal dinheiroGasto) {
-		this.dinheiroGasto = dinheiroGasto;
-	}
-
-	public BigDecimal getTotalDinheiroGasto() {
-		return totalDinheiroGasto;
-	}
-
-	public void setTotalDinheiroGasto(BigDecimal totalDinheiroGasto) {
-		this.totalDinheiroGasto = totalDinheiroGasto;
-	}
-
-	public BigDecimal getVarAuxiliarGasto() {
-		return varAuxiliarGasto;
-	}
-
-	public void setVarAuxiliarGasto(BigDecimal varAuxiliarGasto) {
-		this.varAuxiliarGasto = varAuxiliarGasto;
-	}
-
-	public BigDecimal getMetaDeGasto() {
-		return metaDeGasto;
-	}
-
-	public void setMetaDeGasto(BigDecimal metaDeGasto) {
-		this.metaDeGasto = metaDeGasto;
-	}
-
-	public BigDecimal getSaldoMetaMes() {
-		return saldoMetaMes;
-	}
-
-	public void setSaldoMetaMes(BigDecimal saldoMetaMes) {
-		this.saldoMetaMes = saldoMetaMes;
-	}
-
-	public BigDecimal getSaldoMetaAno() {
-		return saldoMetaAno;
-	}
-
-	public void setSaldoMetaAno(BigDecimal saldoMetaAno) {
-		this.saldoMetaAno = saldoMetaAno;
-	}
-
-	public BigDecimal getSaldoMetaLongoPrazo() {
-		return saldoMetaLongoPrazo;
-	}
-
-	public void setSaldoMetaLongoPrazo(BigDecimal saldoMetaLongoPrazo) {
-		this.saldoMetaLongoPrazo = saldoMetaLongoPrazo;
-	}
-
-	public BigDecimal getValorSalario() {
+	public double getValorSalario() {
 		return valorSalario;
 	}
 
-	public void setValorSalario(BigDecimal valorSalario) {
+	public void setValorSalario(double valorSalario) {
 		this.valorSalario = valorSalario;
 	}
 
-	public BigDecimal getTotalDinheiroInvestido() {
-		return totalDinheiroInvestido;
+	public double getTotalDinheiroGasto() {
+		return totalDinheiroGasto;
 	}
 
-	public void setTotalDinheiroInvestido(BigDecimal totalDinheiroInvestido) {
-		this.totalDinheiroInvestido = totalDinheiroInvestido;
+	public void setTotalDinheiroGasto(double totalDinheiroGasto) {
+		this.totalDinheiroGasto = totalDinheiroGasto;
 	}
-	
+
+	public double getMetaDeGasto() {
+		return metaDeGasto;
+	}
+
+	public void setMetaDeGasto(double metaDeGasto) {
+		this.metaDeGasto = metaDeGasto;
+	}
+
+	public double getSaldoMetaMes() {
+		return saldoMetaMes;
+	}
+
+	public void setSaldoMetaMes(double saldoMetaMes) {
+		this.saldoMetaMes = saldoMetaMes;
+	}
+
+	public double getSaldoMetaAno() {
+		return saldoMetaAno;
+	}
+
+	public void setSaldoMetaAno(double saldoMetaAno) {
+		this.saldoMetaAno = saldoMetaAno;
+	}
+
+	public double getSaldoMetaLongoPrazo() {
+		return saldoMetaLongoPrazo;
+	}
+
+	public void setSaldoMetaLongoPrazo(double saldoMetaLongoPrazo) {
+		this.saldoMetaLongoPrazo = saldoMetaLongoPrazo;
+	}
+
+	public double getRendimentoAnual() {
+		return rendimentoAnual;
+	}
+
+	public void setRendimentoAnual(double rendimentoAnual) {
+		this.rendimentoAnual = rendimentoAnual;
+	}
+
+	public double getValorAplicado() {
+		return valorAplicado;
+	}
+
+	public void setValorAplicado(double valorAplicado) {
+		this.valorAplicado = valorAplicado;
+	}
+
+	public double getTaxaPreFixada() {
+		return taxaPreFixada;
+	}
+
+	public void setTaxaPreFixada(double taxaPreFixada) {
+		this.taxaPreFixada = taxaPreFixada;
+	}
+
+	public double getTaxaPosFixada() {
+		return taxaPosFixada;
+	}
+
+	public void setTaxaPosFixada(double taxaPosFixada) {
+		this.taxaPosFixada = taxaPosFixada;
+	}
+
+	public double getTaxaIPCA() {
+		return taxaIPCA;
+	}
+
+	public void setTaxaIPCA(double taxaIPCA) {
+		this.taxaIPCA = taxaIPCA;
+	}
+
+	public double getValorAnualPorcentagem() {
+		return rendimentoAnual;
+	}
+
+	public void setValorAnualPorcentagem(double valorAnualPorcentagem) {
+		this.rendimentoAnual = valorAnualPorcentagem;
+	}
+
+	public int getPrazoAno() {
+		return prazoAno;
+	}
+
+	public void setPrazoAno(int prazoAno) {
+		this.prazoAno = prazoAno;
+	}
+
+	public double getDinheiroEco() {
+		return dinheiroEco;
+	}
+
+	public void setDinheiroEco(double dinheiroEco) {
+		this.dinheiroEco = dinheiroEco;
+	}
+
 }
