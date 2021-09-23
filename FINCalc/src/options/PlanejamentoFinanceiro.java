@@ -11,9 +11,13 @@ public class PlanejamentoFinanceiro extends Carteira {
      
 	public void regraFinanceira1(double valorSalario) {
 		
-		BigDecimal valor1 = new BigDecimal(valorSalario * 0.5); // 50% = Essenciais: transporte, alimentação, moradia, contas, estudos
-		BigDecimal valor2 = new BigDecimal(valorSalario * 0.3); // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
-		BigDecimal valor3 = new BigDecimal(valorSalario * 0.2); // 20% = Poupar: investimentos, emergências, objetivos
+		double Econ1 = valorSalario * 0.5; // 50% = Essenciais: transporte, alimentação, moradia, contas, estudos
+		double Econ2 = valorSalario * 0.3; // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
+		double Econ3 = valorSalario * 0.2; // 20% = Poupar: investimentos, emergências, objetivos
+				
+		BigDecimal valor1 = new BigDecimal(Econ1); 
+		BigDecimal valor2 = new BigDecimal(Econ2); 
+		BigDecimal valor3 = new BigDecimal(Econ3); 
 		
 		DecimalFormatSymbols dfs = new DecimalFormatSymbols(new Locale("pt", "Brazil"));
 		dfs.setDecimalSeparator(',');
@@ -30,9 +34,13 @@ public class PlanejamentoFinanceiro extends Carteira {
 	
 	public void regraFinanceira2(double valorSalario) {
 		
-		BigDecimal valor1 = new BigDecimal(valorSalario * 0.4); // 40% = Essenciais: transporte, alimentação, moradia, contas, estudos
-		BigDecimal valor2 = new BigDecimal(valorSalario * 0.3); // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
-		BigDecimal valor3 = new BigDecimal(valorSalario * 0.3); // 30% = Poupar: investimentos, emergências, objetivos
+		double Econ1 = valorSalario * 0.4; // 40% = Essenciais: transporte, alimentação, moradia, contas, estudos
+		double Econ2 = valorSalario * 0.3; // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
+		double Econ3 = valorSalario * 0.3; // 30% = Poupar: investimentos, emergências, objetivos
+		
+		BigDecimal valor1 = new BigDecimal(Econ1); 
+		BigDecimal valor2 = new BigDecimal(Econ2); 
+		BigDecimal valor3 = new BigDecimal(Econ3); 
 		
 		DecimalFormatSymbols dfs = new DecimalFormatSymbols(new Locale("pt", "Brazil"));
 		dfs.setDecimalSeparator(',');
@@ -49,10 +57,15 @@ public class PlanejamentoFinanceiro extends Carteira {
 	
 	public void regraFinanceira3(double valorSalario) {
 		
-		BigDecimal valor1 = new BigDecimal(valorSalario * 0.6); // 60% = Essenciais: transporte, alimentação, moradia, contas, estudos; 
-		BigDecimal valor2 = new BigDecimal(valorSalario * 0.2); // 20% = Desejos: jantares, assinaturas de serviços, lazer, videogame;
-		BigDecimal valor3 = new BigDecimal(valorSalario * 0.1); // 10% = Poupar: emergências, objetivos de curto prazo;
-		BigDecimal valor4 = new BigDecimal(valorSalario * 0.1); // 10% = Poupar: investimentos de longo e curto prazo;
+		double Econ1 = valorSalario * 0.6; // 60% = Essenciais: transporte, alimentação, moradia, contas, estudos
+		double Econ2 = valorSalario * 0.2; // 20% = Desejos: jantares, assinaturas de serviços, lazer, videogame
+		double Econ3 = valorSalario * 0.1; // 10% = Poupar: emergências, objetivos de curto prazo
+		double Econ4 = valorSalario * 0.1; // 10% = Poupar: investimentos de longo e curto prazo
+		
+		BigDecimal valor1 = new BigDecimal(Econ1);  
+		BigDecimal valor2 = new BigDecimal(Econ2); 
+		BigDecimal valor3 = new BigDecimal(Econ3); 
+		BigDecimal valor4 = new BigDecimal(Econ4); 
 		
 		DecimalFormatSymbols dfs = new DecimalFormatSymbols(new Locale("pt", "Brazil"));
 		dfs.setDecimalSeparator(',');
