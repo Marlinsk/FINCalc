@@ -8,7 +8,7 @@ import java.util.Locale;
 import entidade.Carteira;
 
 public class Investimentos extends Carteira {
-
+     
 	public static void calcularRentabilidadecomTaxaPreFixada(double valorAplicado, double taxaPreFixada, int prazoAno) {
         
 		double variavelaux1 = (1 + taxaPreFixada / 100);
