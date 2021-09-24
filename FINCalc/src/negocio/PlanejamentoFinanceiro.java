@@ -1,4 +1,4 @@
-package options;
+package negocio;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -6,15 +6,24 @@ import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
 import entidade.Carteira;
+import negocio.PlanejamentoFinanceiro;
 
 public class PlanejamentoFinanceiro extends Carteira {
-     
+    
+	public PlanejamentoFinanceiro(double particaoSalario1, double particaoSalario2, double particaoSalario3, double particaoSalario4) {
+		super(particaoSalario1, particaoSalario2, particaoSalario3, particaoSalario4);
+	}
+
 	public void regraFinanceira1(double valorSalario) {
 		
 		double Econ1 = valorSalario * 0.5; // 50% = Essenciais: transporte, alimentação, moradia, contas, estudos
 		double Econ2 = valorSalario * 0.3; // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
 		double Econ3 = valorSalario * 0.2; // 20% = Poupar: investimentos, emergências, objetivos
-				
+		
+		setParticaoSalario1(Econ1);
+		setParticaoSalario2(Econ2);
+		setParticaoSalario3(Econ3);
+		
 		BigDecimal valor1 = new BigDecimal(Econ1); 
 		BigDecimal valor2 = new BigDecimal(Econ2); 
 		BigDecimal valor3 = new BigDecimal(Econ3); 
@@ -29,6 +38,8 @@ public class PlanejamentoFinanceiro extends Carteira {
 		System.out.println(df.format(valor1));
 		System.out.println(df.format(valor2));
 		System.out.println(df.format(valor3));
+		
+		calculoTotalAcumulado1(Econ1, Econ2, Econ3);
 		
 	}
 	
@@ -38,6 +49,10 @@ public class PlanejamentoFinanceiro extends Carteira {
 		double Econ2 = valorSalario * 0.3; // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
 		double Econ3 = valorSalario * 0.3; // 30% = Poupar: investimentos, emergências, objetivos
 		
+		setParticaoSalario1(Econ1);
+		setParticaoSalario2(Econ2);
+		setParticaoSalario3(Econ3);
+		
 		BigDecimal valor1 = new BigDecimal(Econ1); 
 		BigDecimal valor2 = new BigDecimal(Econ2); 
 		BigDecimal valor3 = new BigDecimal(Econ3); 
@@ -53,6 +68,8 @@ public class PlanejamentoFinanceiro extends Carteira {
 		System.out.println(df.format(valor2));
 		System.out.println(df.format(valor3));
 		
+		calculoTotalAcumulado1(Econ1, Econ2, Econ3);
+		
 	}
 	
 	public void regraFinanceira3(double valorSalario) {
@@ -61,6 +78,11 @@ public class PlanejamentoFinanceiro extends Carteira {
 		double Econ2 = valorSalario * 0.2; // 20% = Desejos: jantares, assinaturas de serviços, lazer, videogame
 		double Econ3 = valorSalario * 0.1; // 10% = Poupar: emergências, objetivos de curto prazo
 		double Econ4 = valorSalario * 0.1; // 10% = Poupar: investimentos de longo e curto prazo
+		
+		setParticaoSalario1(Econ1);
+		setParticaoSalario2(Econ2);
+		setParticaoSalario3(Econ3);
+		setParticaoSalario4(Econ4);
 		
 		BigDecimal valor1 = new BigDecimal(Econ1);  
 		BigDecimal valor2 = new BigDecimal(Econ2); 
@@ -77,7 +99,56 @@ public class PlanejamentoFinanceiro extends Carteira {
 		System.out.println(df.format(valor1));
 		System.out.println(df.format(valor2));
 		System.out.println(df.format(valor3));
-		System.out.println(df.format(valor4));
+		System.out.println(df.format(valor4)); 
+		
+		calculoTotalAcumulado2(Econ1, Econ2, Econ3, Econ4);
+		
+	}
+	
+    public void calculoTotalAcumulado1(double Econ1, double Econ2, double Econ3) {
+		
+		double acumulado1 = Econ1 * 12;
+		double acumulado2 = Econ2 * 12;
+		double acumulado3 = Econ3 * 12;
+		
+		BigDecimal renda1 = new BigDecimal(acumulado1);
+		BigDecimal renda2 = new BigDecimal(acumulado2);
+		BigDecimal renda3 = new BigDecimal(acumulado3);
+		
+		DecimalFormatSymbols dfs = new DecimalFormatSymbols(new Locale("pt", "Brazil"));
+		dfs.setDecimalSeparator(',');
+		dfs.setGroupingSeparator('.');
+		
+		String padraoBR = "###,###.##";
+		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
+		System.out.println(df.format(renda1));
+		System.out.println(df.format(renda2));
+		System.out.println(df.format(renda3));
+		
+	}
+	
+	public void calculoTotalAcumulado2(double Econ1, double Econ2, double Econ3, double Econ4) {
+		
+		double acumulado1 = Econ1 * 12;
+		double acumulado2 = Econ2 * 12;
+		double acumulado3 = Econ3 * 12;
+		double acumulado4 = Econ4 * 12;
+		
+		BigDecimal renda1 = new BigDecimal(acumulado1);
+		BigDecimal renda2 = new BigDecimal(acumulado2);
+		BigDecimal renda3 = new BigDecimal(acumulado3);
+		BigDecimal renda4 = new BigDecimal(acumulado4);
+		
+		DecimalFormatSymbols dfs = new DecimalFormatSymbols(new Locale("pt", "Brazil"));
+		dfs.setDecimalSeparator(',');
+		dfs.setGroupingSeparator('.');
+		
+		String padraoBR = "###,###.##";
+		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
+		System.out.println(df.format(renda1));
+		System.out.println(df.format(renda2));
+		System.out.println(df.format(renda3));
+		System.out.println(df.format(renda4));
 		
 	}
 	
