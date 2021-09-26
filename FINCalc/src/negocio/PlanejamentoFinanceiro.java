@@ -10,10 +10,6 @@ import negocio.PlanejamentoFinanceiro;
 
 public class PlanejamentoFinanceiro extends Carteira {
     
-	public PlanejamentoFinanceiro(double particaoSalario1, double particaoSalario2, double particaoSalario3, double particaoSalario4) {
-		super(particaoSalario1, particaoSalario2, particaoSalario3, particaoSalario4);
-	}
-
 	public void regraFinanceira1(double valorSalario) {
 		
 		double Econ1 = valorSalario * 0.5; // 50% = Essenciais: transporte, alimentação, moradia, contas, estudos
