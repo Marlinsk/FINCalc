@@ -9,16 +9,12 @@ import entidade.Carteira;
 import negocio.PlanejamentoFinanceiro;
 
 public class PlanejamentoFinanceiro extends Carteira {
-    
+
 	public void regraFinanceira1(double valorSalario) {
 		
 		double Econ1 = valorSalario * 0.5; // 50% = Essenciais: transporte, alimentação, moradia, contas, estudos
 		double Econ2 = valorSalario * 0.3; // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
 		double Econ3 = valorSalario * 0.2; // 20% = Poupar: investimentos, emergências, objetivos
-		
-		setParticaoSalario1(Econ1);
-		setParticaoSalario2(Econ2);
-		setParticaoSalario3(Econ3);
 		
 		BigDecimal valor1 = new BigDecimal(Econ1); 
 		BigDecimal valor2 = new BigDecimal(Econ2); 
@@ -45,10 +41,6 @@ public class PlanejamentoFinanceiro extends Carteira {
 		double Econ2 = valorSalario * 0.3; // 30% = Desejos: jantares, assinaturas de serviços, lazer, videogame
 		double Econ3 = valorSalario * 0.3; // 30% = Poupar: investimentos, emergências, objetivos
 		
-		setParticaoSalario1(Econ1);
-		setParticaoSalario2(Econ2);
-		setParticaoSalario3(Econ3);
-		
 		BigDecimal valor1 = new BigDecimal(Econ1); 
 		BigDecimal valor2 = new BigDecimal(Econ2); 
 		BigDecimal valor3 = new BigDecimal(Econ3); 
@@ -74,11 +66,6 @@ public class PlanejamentoFinanceiro extends Carteira {
 		double Econ2 = valorSalario * 0.2; // 20% = Desejos: jantares, assinaturas de serviços, lazer, videogame
 		double Econ3 = valorSalario * 0.1; // 10% = Poupar: emergências, objetivos de curto prazo
 		double Econ4 = valorSalario * 0.1; // 10% = Poupar: investimentos de longo e curto prazo
-		
-		setParticaoSalario1(Econ1);
-		setParticaoSalario2(Econ2);
-		setParticaoSalario3(Econ3);
-		setParticaoSalario4(Econ4);
 		
 		BigDecimal valor1 = new BigDecimal(Econ1);  
 		BigDecimal valor2 = new BigDecimal(Econ2); 
