@@ -30,10 +30,10 @@ public class PlanejamentoFinanceiro extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-		System.out.println(df.format(valorSalario));
-		System.out.println(df.format(valor1));
-		System.out.println(df.format(valor2));
-		System.out.println(df.format(valor3));
+		System.out.println("\n" + "Sua renda mensal de " + "R$ " + df.format(valorSalario) + " foi organizada em:");
+		System.out.println("R$ " + df.format(valor1) + " para essenciais;");
+		System.out.println("R$ " + df.format(valor2) + " para desejos de consumo;");
+		System.out.println("R$ " + df.format(valor3) + " para reserva de emergência + investimentos;");
 		
 		calculoTotalAcumulado1(Econ1, Econ2, Econ3);
 		
@@ -59,10 +59,10 @@ public class PlanejamentoFinanceiro extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-		System.out.println(df.format(valorSalario));
-		System.out.println(df.format(valor1));
-		System.out.println(df.format(valor2));
-		System.out.println(df.format(valor3));
+		System.out.println("\n" + "Sua renda mensal de " + "R$ " + df.format(valorSalario) + " foi organizada em:");
+		System.out.println("R$ " + df.format(valor1) + " para essenciais;");
+		System.out.println("R$ " + df.format(valor2) + " para desejos de consumo;");
+		System.out.println("R$ " + df.format(valor3) + " para reserva de emergência + investimentos;");
 		
 		calculoTotalAcumulado1(Econ1, Econ2, Econ3);
 		
@@ -91,11 +91,11 @@ public class PlanejamentoFinanceiro extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-		System.out.println(df.format(valorSalario));
-		System.out.println(df.format(valor1));
-		System.out.println(df.format(valor2));
-		System.out.println(df.format(valor3));
-		System.out.println(df.format(valor4)); 
+		System.out.println("\n" + "Sua renda mensal de " + "R$ " + df.format(valorSalario) + " foi organizada em:");
+		System.out.println("R$ " + df.format(valor1) + " para essenciais;");
+		System.out.println("R$ " + df.format(valor2) + " para desejos de consumo;");
+		System.out.println("R$ " + df.format(valor3) + " para reserva de emergência;");
+		System.out.println("R$ " + df.format(valor4) + " para investimentos;"); 
 		
 		calculoTotalAcumulado2(Econ1, Econ2, Econ3, Econ4);
 		
@@ -117,9 +117,10 @@ public class PlanejamentoFinanceiro extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-		System.out.println(df.format(renda1));
-		System.out.println(df.format(renda2));
-		System.out.println(df.format(renda3));
+		System.out.println("\n" + "Por ano você tem um acumulo de: ");
+		System.out.println("R$ " + df.format(renda1) + " para essenciais;");
+		System.out.println("R$ " + df.format(renda2) + " para desejos de consumo;");
+		System.out.println("R$ " + df.format(renda3) + " para reserva de emergência + investimentos;");
 		
 	}
 	
@@ -141,10 +142,11 @@ public class PlanejamentoFinanceiro extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-		System.out.println(df.format(renda1));
-		System.out.println(df.format(renda2));
-		System.out.println(df.format(renda3));
-		System.out.println(df.format(renda4));
+		System.out.println("\n" + "Por ano você tem um acumulo de: ");
+		System.out.println("R$" + df.format(renda1) + " para essenciais;"); 
+		System.out.println("R$" + df.format(renda2) + " para desejos de consumo;");
+		System.out.println("R$" + df.format(renda3) + " para reserva de emergência;");
+		System.out.println("R$" + df.format(renda4) + " para investimentos;");
 		
 	}
 	
