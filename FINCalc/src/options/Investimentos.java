@@ -5,12 +5,10 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
-import entidade.Carteira;
+public class Investimentos {
 
-public class Investimentos extends Carteira {
-     
-	public static void calcularRentabilidadecomTaxaPreFixada(double valorAplicado, double taxaPreFixada, int prazoAno) {
-        
+	public void calcularRentabilidadecomTaxaPreFixada(double taxaPreFixada, int prazoAno, double valorAplicado) {
+		
 		double variavelaux1 = (1 + taxaPreFixada / 100);
 		int variavelaux2 = prazoAno;
 		double formula = Math.pow(variavelaux1, variavelaux2);
@@ -23,13 +21,13 @@ public class Investimentos extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-		System.out.println(df.format(valorfuturo));
+		System.out.println("\nR$ " + df.format(valorfuturo));
 		
 	}
      
-    public static void calcularRentabilidadecomTaxaPosFixada(double valorAplicado, double rendimentoAnual, double taxaPosFixada, int prazoAno) {
+    public void calcularRentabilidadecomTaxaPosFixada(double taxaPosFixada, double rendimentoAplicacao, int prazoAno, double valorAplicado) {
     	
-    	double variavelaux1 = ( 1 + (taxaPosFixada / 100) * (rendimentoAnual/100));
+    	double variavelaux1 = ( 1 + (taxaPosFixada / 100) * (rendimentoAplicacao/100));
     	int variavelaux2 = prazoAno;
     	double formula = Math.pow(variavelaux1, variavelaux2);
     	
@@ -41,12 +39,12 @@ public class Investimentos extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-    	System.out.println(df.format(valorFututo));
+    	System.out.println("\nR$" + df.format(valorFututo));
 	}
     
-    public static void calcularRentabilidadecomTaxaIPCA(double valorAplicado, double rendimentoAnual, double taxaIPCA, int prazoAno) {
+    public void calcularRentabilidadecomTaxaIPCA(double taxaIPCA, double rendimentoAplicacao, int prazoAno, double valorAplicado) {
     	
-    	double variavelaux1 = ( 1 + (taxaIPCA / 100) * (rendimentoAnual/100));
+    	double variavelaux1 = ( 1 + (taxaIPCA / 100) * (rendimentoAplicacao/100));
     	int variavelaux2 = prazoAno;
     	double formula = Math.pow(variavelaux1, variavelaux2);
     	
@@ -58,7 +56,7 @@ public class Investimentos extends Carteira {
 		
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-    	System.out.println(df.format(valorfututo3));
+    	System.out.println("\nR$" + df.format(valorfututo3));
     
     }
 	
@@ -72,7 +70,7 @@ public class Investimentos extends Carteira {
 			
 		String padraoBR = "###,###.##";
 		DecimalFormat df = new DecimalFormat(padraoBR, dfs);
-    	System.out.println(df.format(rentabilidadeAtual));
+    	System.out.println("\nR$" + df.format(rentabilidadeAtual));
         
     }
 
