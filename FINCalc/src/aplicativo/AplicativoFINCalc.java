@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import entidade.Carteira;
 import negocio.PlanejamentoFinanceiro;
-import options.Investimentos;
+import options.CalculadoraRentabilidade;
 
 public class AplicativoFINCalc {
 
@@ -94,7 +94,7 @@ public class AplicativoFINCalc {
 
 		Scanner scan = new Scanner(System.in);
 		
-		Investimentos inv = new Investimentos();
+		CalculadoraRentabilidade inv = new CalculadoraRentabilidade();
 
 		double valorInvestido;
 		double taxaPreFixada;
